@@ -1,0 +1,16 @@
+# 公有仓库
+source 'https://github.com/CocoaPods/Specs.git'
+## 私有仓库
+source 'https://git.nya.pics/Ligo/LigoPods.git'
+
+use_frameworks!
+
+target 'ZEDBrowseBigImage_Example' do
+  pod 'ZEDBrowseBigImage', :path => '../'
+
+  target 'ZEDBrowseBigImage_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
