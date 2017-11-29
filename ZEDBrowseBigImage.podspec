@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZEDBrowseBigImage'
-  s.version          = '0.1.0'
-  s.summary          = 'ZEDBrowseBigImage.'
+  s.version          = '0.0.1'
+  s.summary          = '一个用于查看大图，带有全屏大图显示消失动画的工具'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/lichao1992/ZEDBrowseBigImage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'ZEDBrowseBigImage/Classes/**/*'
   
@@ -38,6 +38,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.frameworks = 'UIKit', 'Fundation'
+  s.dependency 'SDWebImage', '~> 4.2.2'
 end

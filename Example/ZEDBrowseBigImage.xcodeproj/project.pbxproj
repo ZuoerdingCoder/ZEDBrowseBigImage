@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		32C065AE71856F81C290E267 /* Pods_ZEDBrowseBigImage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZEDBrowseBigImage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56B3DCA73E8277FBA6F7C515 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		56B3DCA73E8277FBA6F7C515 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZEDBrowseBigImage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEDBrowseBigImage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,11 +61,11 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7662BDDFC0E1B00A312087EF /* Pods-ZEDBrowseBigImage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZEDBrowseBigImage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZEDBrowseBigImage_Tests/Pods-ZEDBrowseBigImage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		908BD6582DDE095A1EC19BC3 /* ZEDBrowseBigImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZEDBrowseBigImage.podspec; path = ../ZEDBrowseBigImage.podspec; sourceTree = "<group>"; };
+		908BD6582DDE095A1EC19BC3 /* ZEDBrowseBigImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZEDBrowseBigImage.podspec; path = ../ZEDBrowseBigImage.podspec; sourceTree = "<group>"; };
 		9E131E1CF5BEF3CF70590B2C /* Pods-ZEDBrowseBigImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZEDBrowseBigImage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZEDBrowseBigImage_Example/Pods-ZEDBrowseBigImage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AFC943F78CD20486F2CD7D7F /* Pods-ZEDBrowseBigImage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZEDBrowseBigImage_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZEDBrowseBigImage_Tests/Pods-ZEDBrowseBigImage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BFF5BC3ADB9FAF9190DE48AD /* Pods-ZEDBrowseBigImage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZEDBrowseBigImage_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZEDBrowseBigImage_Example/Pods-ZEDBrowseBigImage_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E998D1E456EA2AC383982C82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E998D1E456EA2AC383982C82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FF982DFB216E184F658F0038 /* Pods_ZEDBrowseBigImage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZEDBrowseBigImage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -250,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "李超";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = AD4B7EHFQ5;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -370,10 +373,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZEDBrowseBigImage_Example/Pods-ZEDBrowseBigImage_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ZEDBrowseBigImage/ZEDBrowseBigImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZEDBrowseBigImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,9 +541,11 @@
 			baseConfigurationReference = BFF5BC3ADB9FAF9190DE48AD /* Pods-ZEDBrowseBigImage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AD4B7EHFQ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZEDBrowseBigImage/ZEDBrowseBigImage-Prefix.pch";
 				INFOPLIST_FILE = "ZEDBrowseBigImage/ZEDBrowseBigImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,9 +558,11 @@
 			baseConfigurationReference = 9E131E1CF5BEF3CF70590B2C /* Pods-ZEDBrowseBigImage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AD4B7EHFQ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZEDBrowseBigImage/ZEDBrowseBigImage-Prefix.pch";
 				INFOPLIST_FILE = "ZEDBrowseBigImage/ZEDBrowseBigImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,6 @@
+framework module ZEDBrowseBigImage {
+  umbrella header "ZEDBrowseBigImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

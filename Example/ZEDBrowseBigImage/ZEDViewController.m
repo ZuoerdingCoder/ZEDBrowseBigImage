@@ -7,8 +7,11 @@
 //
 
 #import "ZEDViewController.h"
+#import <ZEDBrowseBigImage/ZEDBrowseBigImage.h>
 
 @interface ZEDViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -19,6 +22,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (IBAction)tapAction:(id)sender {
+    [[ZEDBrowseBigImage shareBrowseImageHelper] browseImageWithImageView:self.imageView portrait:nil];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

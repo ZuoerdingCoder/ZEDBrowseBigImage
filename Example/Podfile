@@ -10,7 +10,5 @@ target 'ZEDBrowseBigImage_Example' do
 
   target 'ZEDBrowseBigImage_Tests' do
     inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
   end
 end

@@ -1,0 +1,21 @@
+PODS:
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - ZEDBrowseBigImage (0.0.1):
+    - SDWebImage (~> 4.2.2)
+
+DEPENDENCIES:
+  - ZEDBrowseBigImage (from `../`)
+
+EXTERNAL SOURCES:
+  ZEDBrowseBigImage:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  ZEDBrowseBigImage: 95e97ffdbbb418c0338913c59e583f50070c82a2
+
+PODFILE CHECKSUM: 4a1894e6e553637c4d8c2da275c4a72d4e79e8ed
+
+COCOAPODS: 1.3.1

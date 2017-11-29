@@ -1,0 +1,6 @@
+framework module Pods_ZEDBrowseBigImage_Example {
+  umbrella header "Pods-ZEDBrowseBigImage_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
